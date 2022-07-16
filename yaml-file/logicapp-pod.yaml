@@ -3,6 +3,15 @@ kind: Namespace
 metadata:
   name: logicapp
 ---
+apiVersion: v1
+data:
+  scs: <<your_azure-storage-account_connectionstring_base64-encryted>>
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: storage-cs
+  namespace: logicapp
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,7 +37,11 @@ spec:
         - containerPort: 80
         env:
         - name: AzureWebJobsStorage
-          value: <<your_azure-storage-account_connectionstring>>
+          valueFrom:
+            secretKeyRef:
+              name: storage-cs
+              key: scs
+              optional: false
         resources:
           requests:
             memory: "128Mi"
