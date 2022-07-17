@@ -27,7 +27,7 @@ kubectl create secret generic storage-cs --dry-run=client -o yaml --from-literal
 11. Validate deployment, get ip address assignet to deployment and check if logic app is deployed. 
 ```sh
 kubectl get service -n logicapp
-curl -o websiste <<your_ip-address>>
+curl -l <<your_ip-address>>
 ```
 12. Open Postmand and fetch logic app URL using callback URL
     + Fetch master key from your Azure Blob Storage in container name "azure-webjobs-secrets" and file name "host.json", this key will help in fetching callback URL, Image reference.
