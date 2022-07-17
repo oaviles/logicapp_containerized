@@ -41,4 +41,8 @@ curl -I <<your_ip-address>>
 14. A random number will be displayed in your browser.
 15. Test and Enjoy PoC
 
+You can learn more about Logic Apps here:
++ [What is Azure Logic Apps?](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) 
++ [Microsoft Learn about Logic Apps and what you can do](https://docs.microsoft.com/en-us/learn/paths/build-workflows-with-logic-apps/)
+
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
