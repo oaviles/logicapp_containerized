@@ -23,6 +23,7 @@ kubectl create secret generic storage-cs --dry-run=client -o yaml --from-literal
 7. Update YAML files called ["logicapp-pod.yaml"](https://github.com/oaviles/logicapp_containerized/blob/master/yaml-file/logicapp-pod.yaml) with your encoded "Azure Storage Account Connection String" in line 8.
 8. Create Secrets refered in Gihub Actions called ["build-push-image.yml"](https://github.com/oaviles/logicapp_containerized/blob/master/.github/workflows/build-push-image.yml)
 9. Build a Push Image to Container Registry (ACR), reuse GitHub Workflow called ["build-push-image.yml"](https://github.com/oaviles/logicapp_containerized/blob/master/.github/workflows/build-push-image.yml) 
+    + Optional, you can deploy the image to Docker Hub. You can reuse this Github Workflow to do it. ["build-push-image-dockerhub.yml"](https://github.com/oaviles/logicapp_containerized/actions/workflows/build-push-image-dockerhub.yml)
 10. Deploy Logic App on Kubernetes using YAML file called ["logicapp-pod.yaml"](https://github.com/oaviles/logicapp_containerized/blob/master/yaml-file/logicapp-pod.yaml)
 11. Validate deployment, get ip address assignet to deployment and check if logic app is deployed. 
 ```sh
@@ -35,7 +36,7 @@ curl -I <<your_ip-address>>
     + http://<<your_ip-address>>:80/runtime/webhooks/workflow/api/management/workflows/oapistaless/triggers/manual/listCallbackUrl?api-version=2020-05-01-preview&code=<<your_logicapp-master-key>>
     ![](https://microsoft.github.io/AzureTipsAndTricks/files/95postmanresults.png)
     
-13. Copy and Paste in your Bowser value from postman results (line 2). This this a example of url value:
+13. Copy and Paste in your Bowser value from postman results (line 2). This this an example of url value:
     + http://localhost:80/api/{your logic app workflow name}/triggers/manual/invoke?api-version=2020-05-01-preview&sp={value for sp}&sv={value for sv}&sig={value for sig}
     + http://<<your_ip-address>>:80/api/oapistaless/triggers/manual/invoke?api-version=2020-05-01-preview&sp={value for sp}&sv={value for sv}&sig={value for sig} 
 14. A random number will be displayed in your browser.
