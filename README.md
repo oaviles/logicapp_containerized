@@ -5,7 +5,7 @@
 2. Azure subscription.
 3. A Service Principal with Contributor role at subscription scope. This is the identity that will be used to access the Azure resources from GitHub Action.
     + If you don't have a Service Principal, create one by following [these steps](https://docs.microsoft.com/en-us/azure/developer/github/connect-from-azure).
-4. Deploy Azure Kubernetes Service, your can reuse this project and run GitHub Action called ["Depoy AKS Env"](https://github.com/oaviles/hello_iac/actions/workflows/tf-deploy-aks.yml). You can also depoy this PoC on:
+4. Deploy Azure Kubernetes Service, your can reuse this project and run GitHub Action called ["Depoy AKS Env"](https://github.com/oaviles/hello_iac/actions/workflows/tf-deploy-aks.yml). Optional, you can also depoy this PoC on:
     + EKS: ["Deploy EKS Env"](https://github.com/oaviles/hello_iac/actions/workflows/tf-deploy-eks.yml)
     + GKE: ["Deploy GKE Env"](https://github.com/oaviles/hello_iac/actions/workflows/tf-deploy-gke.yml)
 5. Create an Azure Storage Account and get Connection String.
