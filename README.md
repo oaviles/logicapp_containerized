@@ -47,5 +47,6 @@ You can learn more about Logic Apps here:
 + [Microsoft Learn: Build automated workflows to integrate data and apps with Azure Logic Apps](https://docs.microsoft.com/en-us/learn/paths/build-workflows-with-logic-apps/)
 + [New hosting options for Azure Logic Apps](https://azure.microsoft.com/en-us/updates/logic-apps-updated-with-new-hosting-options-improved-performance-and-developer-workflows/)
 + [Build your first Single Tenant Logic App (Standard) with VS Code](https://docs.microsoft.com/en-us/azure/logic-apps/create-single-tenant-workflows-visual-studio-code)
++ [Azure Tips and Tricks: How to run Logic Apps in a Docker container](https://youtu.be/GHk7Arm247E)
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
