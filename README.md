@@ -10,8 +10,8 @@
     + GKE: ["Deploy GKE Env"](https://github.com/oaviles/hello_iac/actions/workflows/tf-deploy-gke.yml)
 5. Create an Azure Storage Account and get Connection String.
 ```sh
-az storage account create --name <account-name> --resource-group storage-resource-group --location eastus --sku Standard_LRS --kind StorageV2
-az storage account show-connection-string --name <account-name> --resource-group storage-resource-group
+az storage account create --name <account-name> --resource-group <storage-resource-group> --location eastus --sku Standard_LRS --kind StorageV2
+az storage account show-connection-string --name <account-name> --resource-group <storage-resource-group>
 ```
 6. Encode your "Azure Storage Account Connection String" o Create a Secret in Kubernetes called "storage-cs" and key "csc" with your "Azure Storage Account Connection String" .
 ```sh
